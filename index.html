@@ -6,15 +6,8 @@
 
 <body id="bodyTag">
     <div style="position: relative;" id="embedContainer">
-        <style> 
-             html{width: auto;}  
-        </style>
-        <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
-            <input name="sitesearch" type="hidden" value="">
-            <input autocomplete="on" class="form-control search" name="q" placeholder="Search in google.com"
-                required="required" type="text">
-            <button class="button" type="submit">Search</button>
-        </form>
+        <a data-pin-do="embedBoard" data-pin-lang="ru" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80" href="https://pin.it/1LWczCT"></a>
+        <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
     </div>
 
 
@@ -35,28 +28,6 @@
       embedContainer.innerHTML = `Somth Fucked Up`
     }
 
-    </script>
-
-    <script type="text/javascript" charset="utf-8">
-        (function () {
-            function getInitialColorMode() {
-                const mql = window.matchMedia('(prefers-color-scheme: dark)');
-                const hasMediaQueryPreference = typeof mql.matches === 'boolean';
-                if (hasMediaQueryPreference) {
-                    return mql.matches ? 'dark' : 'light';
-                }
-                return 'light';
-            }
-            if ('dark' === 'default') {
-                if (getInitialColorMode() === 'light') {
-                    document.body.style.background = "white";
-                } else {
-                    document.body.style.background = "rgb(47, 52, 55)";
-                }
-            } else {
-                document.body.style.background = "rgb(47, 52, 55)";
-            }
-        })()
     </script>
 </body>
 
