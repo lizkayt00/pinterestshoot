@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body id="bodyTag">
+    <div style="position: relative;" id="embedContainer">
+        <style> 
+             html{width: auto;}  
+        </style>
+        <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+            <input name="sitesearch" type="hidden" value="">
+            <input autocomplete="on" class="form-control search" name="q" placeholder="Search in google.com"
+                required="required" type="text">
+            <button class="button" type="submit">Search</button>
+        </form>
+    </div>
+
+
+    <script type="text/javascript" charset="utf-8">
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        var embedContainer = document.getElementById("embedContainer");
+
+        if (inIframe()) {
+      // It's ok
+    } else {
+      embedContainer.innerHTML = `Somth Fucked Up`
+    }
+
+    </script>
+
+    <script type="text/javascript" charset="utf-8">
+        (function () {
+            function getInitialColorMode() {
+                const mql = window.matchMedia('(prefers-color-scheme: dark)');
+                const hasMediaQueryPreference = typeof mql.matches === 'boolean';
+                if (hasMediaQueryPreference) {
+                    return mql.matches ? 'dark' : 'light';
+                }
+                return 'light';
+            }
+            if ('dark' === 'default') {
+                if (getInitialColorMode() === 'light') {
+                    document.body.style.background = "white";
+                } else {
+                    document.body.style.background = "rgb(47, 52, 55)";
+                }
+            } else {
+                document.body.style.background = "rgb(47, 52, 55)";
+            }
+        })()
+    </script>
+</body>
+
+</html>
